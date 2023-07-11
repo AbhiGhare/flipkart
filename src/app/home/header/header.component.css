@@ -1,0 +1,27 @@
+ul{
+    display: flex;
+    justify-content: center;
+    background-color: #fff;
+    padding: 10px 0px;
+    margin-bottom: 10px;
+    /* border-bottom: 1px solid black; */
+    box-shadow: 0 1px 1px 0 rgba(0,0,0,.16);
+}
+
+
+
+li{
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-left: 50px;
+}
+li img{
+    width: 64px;
+    height: 64px;
+}
+li p{
+    font-weight: 500;
+    font-size: 14px;
+}

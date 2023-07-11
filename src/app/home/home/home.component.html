@@ -1,0 +1,229 @@
+<div class="all">
+  <app-header></app-header>
+  <app-slider></app-slider>
+  <!-- slider1 -->
+  <div class="sliderItem1">
+    <div class="left">
+      <p>Best of Product</p>
+      <a class="addtocart">VIEW ALL</a>
+    </div>
+    <div class="center height">
+      <div
+        id="carouselExampleControls"
+        class="carousel carousel-dark slide height"
+        data-bs-ride="carousel"
+      >
+        <!-- slide -->
+        <div class="carousel-inner height">
+          <div class="carousel-item active height">
+            <div
+              class="card-wrapper container-sm d-flex justify-content-around height"
+            >
+              <div class="card" *ngFor="let item of data">
+                <div class="img">
+                  <img src="{{ item.image }}" alt="" />
+                </div>
+                <h5 class="h5">
+                  {{ item.title }}
+                </h5>
+
+                <div class="price">From{{ item.price| currencyConverter | currency : "INR" }}</div>
+                <button class="btn btn-primary" (click)="addtoCart(item)">Add to Card</button>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-item height">
+            <div
+              class="card-wrapper container-sm d-flex justify-content-around height"
+            >
+              <div class="card" *ngFor="let item of data1">
+                <div class="img">
+                  <img src="{{ item.image }}" alt="" />
+                </div>
+                <h5 class="h5">
+                  {{ item.title }}
+                </h5>
+
+                <div class="price">From{{ item.price |currencyConverter| currency : "INR" }}</div>
+                <button class="btn btn-primary" (click)="addtoCart(item)">Add to Card</button>
+              </div>
+            </div>
+          </div>
+
+          <button
+            type="button"
+            data-bs-target="#carouselExampleControls"
+            data-bs-slide="prev"
+            class="btnP"
+          >
+            <span aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+            <mat-icon class="mat-icon-left">keyboard_arrow_left</mat-icon>
+          </button>
+          <button
+            type="button"
+            data-bs-target="#carouselExampleControls"
+            data-bs-slide="next"
+            class="btnP"
+            style="float: right"
+          >
+            <span aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+            <mat-icon class="mat-icon-right">keyboard_arrow_right</mat-icon>
+          </button>
+        </div>
+      </div>
+    </div>
+    <div class="right">
+      <img src="../../../assets/right1.webp" alt="" />
+    </div>
+  </div>
+
+  <!-- slider 2 -->
+  <div class="sliderItem2">
+    <div class="left">
+      <p>Best of Product</p>
+      <a class="addtocart">VIEW ALL</a>
+    </div>
+    <div class="centerS2 height">
+      <div
+        id="carouselExampleControls2"
+        class="carousel carousel-dark slide height"
+        data-bs-ride="carousel"
+      >
+        <div class="carousel-inner height">
+          <div class="carousel-item active height">
+            <div
+              class="card-wrapper container-sm d-flex justify-content-around height"
+            >
+              <div class="card" *ngFor="let item of data2">
+                <div class="img">
+                  <img src="{{ item.image }}" alt="" />
+                </div>
+                <h5 class="h5">
+                  {{ item.title }}
+                </h5>
+
+                <div class="price">From{{ item.price| currencyConverter | currency : "INR" }}</div>
+                <button class="btn btn-primary" (click)="addtoCart(item)">Add to Card</button>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-item height">
+            <div
+              class="card-wrapper container-sm d-flex justify-content-around height"
+            >
+              <div class="card" *ngFor="let item of data3">
+                <div class="img">
+                  <img src="{{ item.image }}" alt="" />
+                </div>
+                <h5 class="h5">
+                  {{ item.title }}
+                </h5>
+
+                <div class="price">From{{ item.price| currencyConverter | currency : "INR" }}</div>
+                <button class="btn btn-primary" (click)="addtoCart(item)">Add to Card</button>
+              </div>
+            </div>
+          </div>
+
+          <button
+            type="button"
+            data-bs-target="#carouselExampleControls2"
+            data-bs-slide="prev"
+            class="btnP"
+          >
+            <span aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+            <mat-icon class="mat-icon-left">keyboard_arrow_left</mat-icon>
+          </button>
+          <button
+            type="button"
+            data-bs-target="#carouselExampleControls2"
+            data-bs-slide="next"
+            class="btnP"
+            style="float: right"
+          >
+            <span aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+            <mat-icon class="mat-icon-right">keyboard_arrow_right</mat-icon>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- slider 3 -->
+  <div class="sliderItem2">
+    <div class="left">
+      <p>Best of Product</p>
+      <a class="addtocart">VIEW ALL</a>
+    </div>
+    <div class="centerS2 height">
+      <div
+        id="carouselExampleControls3"
+        class="carousel carousel-dark slide height"
+        data-bs-ride="carousel"
+      >
+        <div class="carousel-inner height">
+          <div class="carousel-item active height">
+            <div
+              class="card-wrapper container-sm d-flex justify-content-around height"
+            >
+              <div class="card" *ngFor="let item of data4">
+                <div class="img">
+                  <img src="{{ item.image }}" alt="" />
+                </div>
+                <h5 class="h5">
+                  {{ item.title }}
+                </h5>
+
+                <div class="price">From{{ item.price| currencyConverter | currency : "INR" }}</div>
+                <button class="btn btn-primary" (click)="addtoCart(item)">Add to Card</button>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-item height">
+            <div
+              class="card-wrapper container-sm d-flex justify-content-around height"
+            >
+              <div class="card" *ngFor="let item of data5">
+                <div class="img">
+                  <img src="{{ item.image }}" alt="" />
+                </div>
+                <h5 class="h5">
+                  {{ item.title }}
+                </h5>
+
+                <div class="price">From{{ item.price | currencyConverter| currency : "INR" }}</div>
+                <button class="btn btn-primary" (click)="addtoCart(item)">Add to Card</button>
+              </div>
+            </div>
+          </div>
+
+          <button
+            type="button"
+            data-bs-target="#carouselExampleControls3"
+            data-bs-slide="prev"
+            class="btnP"
+          >
+            <span aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+            <mat-icon class="mat-icon-left">keyboard_arrow_left</mat-icon>
+          </button>
+          <button
+            type="button"
+            data-bs-target="#carouselExampleControls3"
+            data-bs-slide="next"
+            class="btnP"
+            style="float: right"
+          >
+            <span aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+            <mat-icon class="mat-icon-right">keyboard_arrow_right</mat-icon>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

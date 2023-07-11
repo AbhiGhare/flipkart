@@ -1,0 +1,31 @@
+<!-- <p>search-item works!</p> -->
+<ul>
+    <li  *ngFor="let item of data ">
+        <div class="parent">
+            <div class="left">
+                <div class="img" >
+                    <img [src]="[item.image]" alt="" >
+                </div>
+                <div class="left-bottom">
+                    <div class="btn" (click)="addtoCart(item)">
+                        add to Cart
+                    </div>
+                    <div class="btn">
+                        Buy now
+                    </div>
+                </div>
+            </div>
+            <div class="right">
+                <h1>{{item.title}}</h1><br>
+                <span class="price">{{item.price}}</span>
+                <span class="rating">{{item.rating.rate}}
+                    <mat-icon>grade</mat-icon>
+                </span>
+                <span>About item</span>
+                <p>{{item.description}}</p>
+            </div>
+        </div>
+       
+    </li>
+</ul>
+<!-- <p>{{data.title}}</p> -->

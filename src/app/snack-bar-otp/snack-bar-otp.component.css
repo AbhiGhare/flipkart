@@ -1,0 +1,28 @@
+.cus-snakebar{
+    display: flex;
+    /* background-color: #292929 !important; */
+    color: whitesmoke !important;
+    overflow: hidden;
+    align-items: center;
+}
+.cus-snakebar::before{
+    content:'';
+    position: absolute ;
+    width: 140px;
+    height: 90px;
+    border-radius: 50%;
+    /* background-color: #01dc6a; */
+    background-color: white;
+    left: -40px;
+    z-index: -1;
+    top: -10px;
+    filter: blur(56px);
+}
+.img{
+    width: 50px;
+    position: relative;
+    margin-right: 10px;
+}
+.img img{
+    width: 100%;
+}

@@ -1,0 +1,62 @@
+/* p{
+    width: 500px ;
+    height: 200px;
+    background-color: aqua;
+
+    z-index:1235,
+} */
+.parent{
+    display: flex;
+    width: 100%;
+    height: 100%;
+    /* margin: 16px auto 0; */
+    width: 840px;
+    min-height: 520px;
+    position: relative;
+    max-width: inherit;
+    background-color: #fff;
+    box-shadow: 0 2px 4px 0 rgba(0,0,0,.08);
+}
+.left{
+    background-color: #2874f0;
+    color: #fff;
+    padding: 40px 32px;
+    font-size: 15px;
+    background-image: url(../../../assets//login_img_c4a81e.png);
+    background-position: center 85%;
+    background-repeat: no-repeat;
+}
+.left span{
+    font-size: 36px;
+}
+.left p{
+    /* font-size: 14px; */
+    font-size: 18px;
+width: 254px;
+color: #dbdbdb;
+}
+.right{
+    /* width: 200px; */
+    padding: 56px 35px 16px;
+    position: relative;
+    background-color: #fff;
+}
+.right form {
+    display: flex;
+    flex-direction: column;
+}
+.mdc-text-field--filled:not(.mdc-text-field--disabled) {
+    background-color: transparent !important;
+}
+.example-full-width{
+    width: 450px !important;
+}
+button{
+    background: #fb641b;
+    box-shadow: 0 1px 2px 0 rgba(0,0,0,.2);
+    border: none;
+    color: #fff;
+    height: 48px;
+    font-size: 15px;
+    border-radius: 3px;
+}

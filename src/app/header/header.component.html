@@ -1,0 +1,117 @@
+<header class="toolbar" role="banner">
+  <!-- logo -->
+  <div class="logo">
+    <img src="../../assets/fk-plus_3b0baa.png" alt="" routerLink="home" (click)="homePage()"/>
+  </div>
+  <!-- search bar -->
+  <div class="searchBar">
+    <form [formGroup]="form">
+      <input type="text" placeholder="Search for products brands and more"  (keyup)="search()" formControlName="name" mat-button [matMenuTriggerFor]="menu" />
+    </form>
+    <mat-icon >search</mat-icon>
+  </div>
+  <div class="searchItem">
+    <mat-menu #menu="matMenu">
+      <li mat-menu-item *ngFor="let item of data | filter:filterstring " class="Liitems" (click)="getId(item)">
+        <div class="img">
+          <img src="{{item.image}}" alt="">
+        </div>
+        <p>{{item.title}}</p>
+      </li>
+      
+    </mat-menu>
+  </div>
+  <div class="items" [ngSwitch]="menuType">
+    <div class="types" *ngSwitchCase="'default'">
+      
+      <div class="items" [ngSwitch]="itemsType">
+        <div class="items" *ngSwitchCase="'Idefault'">
+          <!-- login btn -->
+      <div class="btnContainer">
+        <a (click)="openDialog('0ms', '0ms')">Login</a>
+        <div class="Login_menu">
+          <div class="login_list">
+            <app-login-menu-list></app-login-menu-list>
+          </div>
+        </div>
+      </div>
+          <!-- seller -->
+      <div class="seller">
+        <a href="#">Become a Seller</a>
+      </div>
+      <!-- more -->
+      <div class="more_link">
+        <p>More</p>
+        <mat-icon class="icon_more"> keyboard_arrow_down </mat-icon>
+        <div class="more_menu">
+          <div class="more_list">
+            <app-more-list></app-more-list>
+          </div>
+        </div>
+      </div>
+      <div>
+        <div class="cart" routerLink="cart" (click)="onclickCart()">
+          <mat-icon matBadge="0" matBadgeColor="warn">
+            shopping_cart
+          </mat-icon>
+          <span>{{cardItemNumber}}</span>
+          <p >Cart </p>
+        </div>
+      </div>
+        </div>
+
+      <div  *ngSwitchCase="'localCart'">
+         <!-- login btn -->
+      <div class=" margin-left btnContainer">
+        <a (click)="openDialog('0ms', '0ms')">Login</a>
+        <div class="Login_menu">
+          <div class="login_list">
+            <app-login-menu-list></app-login-menu-list>
+          </div>
+        </div>
+      </div>
+        
+      </div>
+      </div>
+    </div>
+
+
+  <!--user signUp  -->
+    <div class="types" *ngSwitchCase="'user'">
+      <!-- login btn -->
+      <div class="btnContainers">
+        <a >{{userName}}</a>
+        <div class="Login_menu">
+          <div class="login_list">
+            <app-login-menu-list2></app-login-menu-list2>
+          </div>
+        </div>
+      </div>
+      <!-- seller -->
+      <div class="seller">
+        <a href="#">Become a Seller</a>
+      </div>
+      <!-- more -->
+      <div class="more_link">
+        <p>More</p>
+        <mat-icon class="icon_more"> keyboard_arrow_down </mat-icon>
+        <div class="more_menu">
+          <div class="more_list">
+            <app-more-list></app-more-list>
+          </div>
+        </div>
+      </div>
+      <div>
+        <div class="cart" routerLink="cart">
+          <mat-icon matBadge="15" matBadgeColor="warn">
+            shopping_cart
+          </mat-icon>
+          <span>{{cardItemNumber}}</span>
+          <p>Cart</p>
+        </div>
+      </div>
+    </div>
+
+
+  </div>
+</header>

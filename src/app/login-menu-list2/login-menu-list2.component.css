@@ -1,0 +1,22 @@
+li{
+    font-size: 15px;
+
+    list-style: none;
+    display: flex;
+    border-bottom: 1px solid gray;
+    padding: 10px 11px;
+font-weight: initial;
+}
+li .top {
+    justify-content: space-between !important;
+}
+li p{
+    margin-right: 30px;
+}
+mat-icon{
+    color: #1976d2;
+font-size: 20px;
+}
+li:last-child{
+    border-bottom: none;
+}

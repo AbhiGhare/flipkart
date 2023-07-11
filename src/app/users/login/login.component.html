@@ -1,0 +1,30 @@
+<div class="parent">
+    <div class="left">
+        <span>Login</span>
+        <p>Get access to your Orders,
+            Wishlist and Recommendations
+        </p>
+    </div>
+    <div class="right">
+        <form [formGroup]="userLogin" (ngSubmit)="login()" *ngIf="showLogin">
+            <div>
+                <mat-form-field class="example-full-width">
+                    <mat-label>Mobile no.</mat-label>
+                    <input type="number" matInput formControlName="mobile">
+                </mat-form-field>
+            </div>
+            <button>Request OTP</button>
+        </form>
+        <form [formGroup]="otpg" (ngSubmit)="otpV()" *ngIf="showOtp">
+            <div>
+                <mat-form-field class="example-full-width">
+                    <mat-label>OTP</mat-label>
+                    <input type="number" matInput formControlName="otp">
+                </mat-form-field>
+            </div>
+            <button mat-button mat-dialog-close (click)="otpV()">Log in</button>
+        </form>
+
+        <!-- <a routerLink="/users/signUp">sign up</a> -->
+    </div>
+</div>

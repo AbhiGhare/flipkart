@@ -1,0 +1,78 @@
+<div [ngSwitch]="menuType">
+    <div class="flip" *ngSwitchCase="'default'">
+        <div class="img">
+            <img src="../../../assets/empticart.webp" alt="">
+        </div>
+        <h5>Missing Cart items?</h5>
+        <p>Login to see the items you added previously</p>
+        <button class="empBtn">
+            Login
+        </button>
+    </div>
+    <!-- local -->
+    <div *ngSwitchCase="'localCart'">
+        <div *ngFor="let item of data">
+            <div class="items">
+                <div class="top">
+                    <div class="left">
+                        <div class="imgs">
+                            <img [src]="[item.image]" alt="">
+                        </div>
+                    </div>
+                    <div class="right">
+                        <a>{{item.title}}</a>
+                        <p>{{item.description}}</p>
+                        <span>{{item.price | currencyConverter | currency:'INR'}}</span>
+                    </div>
+                    <div class="delivery">
+                        <p>Delivery by Sat Jul 8 | Free₹120</p>
+                    </div>
+                </div>
+                <div class="bottom">
+                    <div class="quntity">
+                        <button>-</button>
+                        <span>{{item.quantity}}</span>
+                        <button (click)="plus(item)">+</button>
+                    </div>
+                    <div class="remove">
+                        <a href="#">SAVE FOR LATER</a>
+                        <a (click)="removeCart(item)">REMOVE</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- json -->
+    <div *ngSwitchCase="'json'">
+        <div *ngFor="let item of data">
+            <div class="items">
+                <div class="top">
+                    <div class="left">
+                        <div class="imgs">
+                            <img [src]="[item.image]" alt="">
+                        </div>
+                    </div>
+                    <div class="right">
+                        <a>{{item.title}}</a>
+                        <p>{{item.description}}</p>
+                        <span>{{item.price | currencyConverter | currency:'INR'}}</span>
+                    </div>
+                    <div class="delivery">
+                        <p>Delivery by Sat Jul 8 | Free₹120</p>
+                    </div>
+                </div>
+                <div class="bottom">
+                    <div class="quntity">
+                        <button (click)="minus(item)">-</button>
+                        <span>{{item.quantity}}</span>
+                        <button (click)="plus(item)">+</button>
+                    </div>
+                    <div class="remove">
+                        <a href="#">SAVE FOR LATER</a>
+                        <a (click)="removeCart(item)">REMOVE</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

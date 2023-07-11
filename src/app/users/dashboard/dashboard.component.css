@@ -1,0 +1,23 @@
+.container-flude{
+    display: flex;
+    flex-direction: column;
+}
+.top ul {
+    display: flex;
+    justify-content: center;
+    box-shadow: 0 1px 1px 0 rgba(0,0,0,.16);
+    padding: 9px 0px;
+}
+.top ul li{
+    list-style: none;
+    margin-right: 50px;
+    font-weight: 500;
+    font-size: 14px;
+}
+.bottom{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80vh;
+    background-color: #f1f3f6;
+}

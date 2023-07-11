@@ -1,0 +1,135 @@
+<div class="cards" [ngSwitch]="menuType">
+    <div class="emptyCard" *ngSwitchCase="'default'">
+        <div class="top">
+            <div class="flipkart" [routerLinkActive]="'active'">
+                <a  routerLink="flipkart-item">Flipkart</a>
+                <!-- <span>jjjjj</span> -->
+            </div>
+            <div class="grocery" [routerLinkActive]="'active'">
+                <a  routerLink="grocery-item">Grocery</a>
+            </div>
+        </div>
+        <div class="bottom">
+    <router-outlet></router-outlet>
+           
+        </div>
+    </div>
+    <!-- local -->
+    <div class="emptyCard justify-contain" *ngSwitchCase="'localCart'">
+        <div class="left">
+            <div class="top">
+                <div class="flipkart" [routerLinkActive]="'active'">
+                    <a  routerLink="flipkart-item">Flipkart</a>
+                    <span>{{cardItemNumber}}</span>
+                </div>
+                <div class="grocery" [routerLinkActive]="'active'">
+                    <a  routerLink="grocery-item">Grocery</a>
+                </div>
+            </div>
+            <div class="bottom">
+                <div class="inner">
+                    <router-outlet></router-outlet>
+              
+                </div>
+                <div class="placeOrder">
+                    <div class="orderBtn">
+                        place Order
+                    </div>
+                  </div>
+            </div>
+        </div>
+        <div class=" right" [routerLinkActive]="'active'">
+            <div class="Rtop">
+                <ul >
+                    <li>PRICE DETAILS</li>
+                    <li>
+                        <span>Price ({{cardItemNumber }})</span>
+                        <span>{{totalPrice.price | currencyConverter | currency:'INR'}}</span>
+
+                    </li>
+                    <li>
+                        <span>Discount</span>
+                        <span>− {{totalPrice.discount |currencyConverter | currency:'INR'}}</span>
+                    </li>
+                    <li>
+                        <span>Delivery Charges</span>
+                        <p *ngIf="totalPrice.price<100">
+                            <span style="color: green;">{{'free'}}</span>
+                        </p>
+                        <p *ngIf="totalPrice.price>100">
+                            <span>{{totalPrice.deliveryCharges |currencyConverter | currency:'INR' }}</span>
+
+                        </p>
+                    </li>
+                    <li>
+                        <span>Total Amount</span>
+                        <span>{{totalPrice.totalAmount |currencyConverter | currency:'INR'}}</span>
+                    </li>
+                    <li>You will save {{totalPrice.discount | currencyConverter | currency:'INR' }} on this order</li>
+                </ul>
+            </div>
+            <div class="Rbottom">
+                Safe and Secure Payments.Easy returns.100% Authentic products.
+            </div>
+        </div>
+    </div>
+    <!-- json -->
+    <div class="emptyCard justify-contain" *ngSwitchCase="'json'">
+        <div class="left">
+            <div class="top">
+                <div class="flipkart" [routerLinkActive]="'active'">
+                    <a  routerLink="flipkart-item">Flipkart</a>
+                    <span>{{cardItemNumber}}</span>
+                </div>
+                <div class="grocery" [routerLinkActive]="'active'">
+                    <a  routerLink="grocery-item">Grocery</a>
+                </div>
+            </div>
+            <div class="bottom">
+                <div class="inner">
+                    <router-outlet></router-outlet>
+              
+                </div>
+                <div class="placeOrder">
+                    <div class="orderBtn">
+                        place Order
+                    </div>
+                  </div>
+            </div>
+        </div>
+        <div class=" right" [routerLinkActive]="'active'">
+            <div class="Rtop">
+                <ul >
+                    <li>PRICE DETAILS</li>
+                    <li>
+                        <span>Price ({{cardItemNumber }})</span>
+                        <span>{{totalPrice.price | currencyConverter | currency:'INR'}}</span>
+
+                    </li>
+                    <li>
+                        <span>Discount</span>
+                        <span>− {{totalPrice.discount |currencyConverter | currency:'INR'}}</span>
+                    </li>
+                    <li>
+                        <span>Delivery Charges</span>
+                        <p *ngIf="totalPrice.price<100">
+                            <span style="color: green;">{{'free'}}</span>
+                        </p>
+                        <p *ngIf="totalPrice.price>100">
+                            <span>{{totalPrice.deliveryCharges |currencyConverter | currency:'INR' }}</span>
+
+                        </p>
+                    </li>
+                    <li>
+                        <span>Total Amount</span>
+                        <span>{{totalPrice.totalAmount |currencyConverter | currency:'INR'}}</span>
+                    </li>
+                    <li>You will save {{totalPrice.discount | currencyConverter| currency:'INR' }} on this order</li>
+                </ul>
+            </div>
+            <div class="Rbottom">
+                Safe and Secure Payments.Easy returns.100% Authentic products.
+            </div>
+        </div>
+    </div>
+</div>

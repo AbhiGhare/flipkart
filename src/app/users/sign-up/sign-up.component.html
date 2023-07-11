@@ -1,0 +1,34 @@
+<div class="parent">
+    <div class="left">
+        <span>Sign Up</span>
+        <p>Get access to your Orders,
+            Wishlist and Recommendations
+        </p>
+    </div>
+    <div class="right">
+        <form [formGroup]="signUp" *ngIf="showForm" (ngSubmit)="userSignUpData()">
+            <div>
+                <mat-form-field class="example-full-width">
+                    <mat-label>First name</mat-label>
+                    <input matInput formControlName="name">
+                </mat-form-field>
+            </div>
+            <div>
+                <mat-form-field class="example-full-width">
+                    <mat-label>Mobile number</mat-label>
+                    <input matInput formControlName="mobile">
+                </mat-form-field>
+            </div>
+            <button>Request OTP</button>
+        </form>
+        <form [formGroup]="otp"  (ngSubmit)="OtpGenerate()" *ngIf="showOtp">
+            <div>
+                <mat-form-field class="example-full-width">
+                    <mat-label>First name</mat-label>
+                    <input type="number" matInput formControlName="otp">
+                </mat-form-field>
+            </div>
+            <button>Submit</button>
+        </form>
+    </div>
+</div>

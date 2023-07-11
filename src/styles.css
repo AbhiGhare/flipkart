@@ -1,0 +1,59 @@
+/* You can add global styles to this file, and also import other style files */
+*{
+    padding:0;
+    margin: 0;
+    box-sizing: border-box;
+}
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+p{
+    margin-bottom: 0rem ;
+}
+ul{
+
+    padding-left: 0rem ;
+    margin-bottom: 0rem;
+}
+.mdc-text-field--filled:not(.mdc-text-field--disabled) {
+    background-color: transparent !important;
+}
+
+.mat-mdc-snack-bar-container .mdc-snackbar__surface {
+    /* background-color: var(--mdc-snackbar-container-color, inherit); */
+    background-color: #2874f0 !important;
+  }
+
+.mat-mdc-menu-panel.mat-mdc-menu-panel {
+    min-width: 233px !important;
+    max-width: 440px !important;
+    overflow: auto;
+    -webkit-overflow-scrolling: touch;
+    position: relative;
+    left: -25px !important;
+}
+.mat-mdc-menu-content {
+    margin: 0;
+    padding: 8px 0;
+    list-style-type: none;
+    width: 400px !important;
+}
+.mat-mdc-menu-item .mdc-list-item__primary-text {
+    white-space: normal;
+    width: 100% !important;
+align-items: center !important;
+    display: flex !important;
+    justify-content: space-around !important;
+}
+.mat-mdc-menu-item .mdc-list-item__primary-text p{
+    font-size: 13px;
+      font-weight: 500;
+      /* margin-top: 15px; */
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      width: 250px;
+      color:gray
+  }

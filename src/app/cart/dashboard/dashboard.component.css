@@ -1,0 +1,113 @@
+a{
+    text-decoration: none;
+}
+.cards{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f1f3f6;
+    height: 70vh;
+}
+.emptyCard{
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    position: relative;
+    /* box-shadow: rgba(0, 0, 0, 0.2) 0px 1px 2px 0px; */
+}
+.justify-contain{
+    flex-direction: row !important;
+    justify-content: center;
+}
+.top{
+    display: flex;
+    width: 100%;
+justify-content: space-around;
+align-items: center;
+background-color: white;
+height: 50px;
+box-shadow: rgba(0, 0, 0, 0.2) 0px 1px 2px 0px;
+}
+.bottom{
+    text-align: center;
+background-color: white;
+margin-top: 10px;
+/* padding: 30px 0 36px; */
+box-shadow: rgba(0, 0, 0, 0.2) 0px 1px 2px 0px;
+}
+.flipkart{
+    color: #2a55e5;
+    padding: 12px 200px;
+}
+.active{
+    border-bottom: 3px solid #2a55e5;
+
+}
+.grocery{
+    color: #2a55e5;
+    padding: 12px 200px;
+/* border-bottom: 3px solid #2a55e5; */
+
+}
+.left{
+    width: 80%;
+}
+.right{
+    position: sticky;
+    top: 64px;
+    bottom: 0;
+    z-index: 2;
+    -webkit-align-self: flex-start;
+    -ms-flex-item-align: start;
+    align-self: flex-start;
+    width: 500px;
+    margin-left: 10px;
+}
+.Rtop{
+    position: relative;
+width: 100%;
+background-color: white;
+padding: 20px;
+}
+.Rtop ul{
+    height: 274px;
+}
+.Rtop li{
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+}
+.Rbottom{
+    font-size: 14px;
+    text-align: left;
+    display: inline-block;
+    color: #878787;
+    padding: 5px 0 5px 35px;
+    background: url(../../../assets/shield_b33c0c.svg) no-repeat 0 50%;
+    background-size: 25px 31px;
+    font-weight: 500;
+    margin: 10px 0px;
+}
+.inner{
+    overflow: auto;
+height: 350px;
+}
+.inner::-webkit-scrollbar{
+    display: none;
+}
+.placeOrder{
+    position: sticky;
+top: 64px;
+bottom: 0;
+display: flex;
+justify-content: end;
+padding: 10px;
+background-color: white;
+box-shadow: 0 -2px 10px 0 rgba(0,0,0,.1);
+}
+.orderBtn{
+    width: 200px;
+background-color: orange;
+padding: 10px 0;
+}

@@ -1,0 +1,142 @@
+.flip{
+    padding: 10px 0px;
+}
+.img{
+    height: 162px;
+}
+.img img{
+    height: 100%;
+}
+p{
+    display: block;
+    font-size: 12px;
+    margin-top: 10px
+}
+h5{
+    display: block;
+    font-size: 18px;
+    margin-top: 24px;
+}
+.empBtn{
+    background: #fb641b;
+    box-shadow: 0 1px 2px 0 rgba(0,0,0,.2);
+    border: none;
+    color: #fff;
+    font-size: 14px;
+    margin-top: 20px;
+    font-weight: 400;
+    padding: 12px 72px
+}
+.items{
+    display: flex;
+    padding: 24px;
+    flex-direction: column;
+}
+.top{
+    display: flex;
+}
+.imgs{
+    width: 112px;
+    height: 112px;
+    position: relative;
+}
+.imgs img{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    top: 0;
+    margin: auto;
+    opacity: 1;
+    max-width: 100%;
+    max-height: 100%;
+}
+.right{
+    position: relative;
+width: 550px;
+padding-right: 50px;
+display: inline-block;
+text-align: initial;
+padding-left: 35px;
+}
+.right a{
+    font-size: 16px;
+    color: #212121;
+    line-height: 1;
+    display: block;
+
+    /* font-size: 14px; */
+    /* font-weight: 500; */
+    margin-top: 15px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    width: 100%
+}
+.right p{
+    display: block;
+    color: #878787;
+    font-size: 14px;
+    height: 20px;
+
+    /* font-size: 14px; */
+    /* font-weight: 500; */
+    margin-top: 15px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    /* width: 100px */
+}
+.right span{
+    font-size: 18px;
+    font-weight: 500;
+    color: #212121;
+    display: inline-block;
+    margin-right: 8px;
+    margin-top: 18px;
+}
+.delivery{
+    font-size: 14px;
+    color: #212121;
+    line-height: 1.4;
+}
+.bottom{
+    display: flex;
+    margin-top: 20px;
+}
+.bottom .quntity{
+    margin-right: 50px;
+}
+.bottom .quntity button{
+    padding: 4px;
+background-color: white;
+border: 1px solid gray;
+border-radius: 50%;
+width: 32px;
+height: 32px;
+font-size: 16px;
+font-weight: bolder;
+}
+.bottom .quntity span{
+    border: 1px solid gray;
+padding: 4px 20px;
+margin: 0px 5px;
+border-radius: 4px;
+}
+.remove a{
+    text-decoration: none;
+    color: #212121;
+
+}
+.remove a:hover{
+    color: #0d6efd;
+}
+.remove a:first-child{
+    margin-right: 20px;
+}
